@@ -1,5 +1,10 @@
 <?php
+include_once 'views/indexVue.php';
+?>
 
-//this can be something close to a routing system
 
- ?>
+
+
+
+
+
