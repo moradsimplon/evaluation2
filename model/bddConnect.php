@@ -1,0 +1,17 @@
+<?php
+
+
+// connect in database
+
+
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=evaluation2;charset=utf8', 'root', 'zekri59100');
+}
+
+catch (Exception $e)
+
+{
+
+    die('Erreur : ' . $e->getMessage());
+
+}
