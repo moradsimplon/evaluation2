@@ -4,14 +4,14 @@
 // connect in database
 
 
-try {
-    $bdd = new PDO('mysql:host=localhost;dbname=evaluation2;charset=utf8', 'root', 'zekri59100');
-}
-
-catch (Exception $e)
-
+public
+/**
+ * @return PDO
+ */
+function getDb()
 {
-
-    die('Erreur : ' . $e->getMessage());
-
+    $bdd = new PDO('mysql:host=localhost;dbname=evaluation2;charset=utf8', 'root', 'zekri59100');
+    $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $this->db = $bdd;
+    return $bdd;
 }
