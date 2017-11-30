@@ -2,7 +2,7 @@
 <footer class="footer">
     <div class="container">
         <span class="text-muted">
-            Bibliothèque municipale de Lille - 32/34 rue Édouard Delesalle – 59000 Lille - Tél.: 03.20.15.97.20 <br>
+            &copy Bibliothèque municipale de Lille - 32/34 rue Édouard Delesalle – 59000 Lille - Tél.: 03.20.15.97.20 <br>
             Service technique : 03.43.56.67.90
         </span>
     </div>

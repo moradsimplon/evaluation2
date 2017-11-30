@@ -1,5 +1,5 @@
 <?php
-  include("views/template/header.php")
+  include("template/header.php")
  ?>
 <section class="container ">
 <div class="card text-center m-3">
@@ -22,7 +22,7 @@
     <div class="card-block">
         <h4 class="card-title">Comptes clients</h4>
         <p class="card-text">Visualiser comptes clients et les livres emprunter .</p>
-        <a href="#" class="btn btn-success">Comptes client</a>
+        <a href="controllers/Users.php" class="btn btn-success">Comptes client</a>
     </div>
     <div class="card-footer text-muted">
         listing customers
@@ -31,5 +31,5 @@
 </section>
 
  <?php
-   include("views/template/footer.php")
+   include("template/footer.php")
   ?>

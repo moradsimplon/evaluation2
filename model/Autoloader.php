@@ -7,8 +7,7 @@
  */
 
 
-require("BookManager.php");
-require ("UsersManager.php");
+require("UsersManager.php");
 
 
 

@@ -3,27 +3,15 @@
 
 class ListUsers
 {
-private $id ;
-private $code_user;
-private $name ;
-private $firstName;
+protected $id ;
+protected $codeUser;
+protected $name ;
+protected $firstName;
+protected $adress;
 
-    /**
-     * @return mixed
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
 
-    /**
-     * @param mixed $firstName
-     */
-    public function setFirstName($firstName)
-    {
-        $this->firstName = $firstName;
-    }
-private $adress ;
+
+
 
 
 
@@ -48,7 +36,21 @@ private $adress ;
         }
     }
 
+    /**
+     * @return mixed
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
 
+    /**
+     * @param mixed $firstName
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+    }
     /**
      * @return mixed
      */
@@ -70,15 +72,15 @@ private $adress ;
      */
     public function getCodeUser()
     {
-        return $this->code_user;
+        return $this->codeUser;
     }
 
     /**
-     * @param mixed $code_user
+     * @param mixed $codeUser
      */
-    public function setCodeUser($code_user)
+    public function setCodeUser($codeUser)
     {
-        $this->code_user = $code_user;
+        $this->codeUser = $codeUser;
     }
 
     /**

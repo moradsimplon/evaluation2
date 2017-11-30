@@ -1,5 +1,7 @@
 <?php
-include_once 'views/indexVue.php';
+
+include("controllers/index.php");
+
 ?>
 
 
