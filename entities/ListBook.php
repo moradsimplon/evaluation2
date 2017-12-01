@@ -20,7 +20,7 @@ class ListBook {
     /**
      * @var
      */
-    private $Release_date ;
+    private $RealeaseDate ;
     /**
      * @var
      */
@@ -103,17 +103,17 @@ class ListBook {
     /**
      * @return mixed
      */
-    public function getReleaseDate()
+    public function getRealeaseDate()
     {
-        return $this->Release_date;
+        return $this->RealeaseDate;
     }
 
     /**
-     * @param mixed $Release_date
+     * @param mixed $RealeaseDate
      */
-    public function setReleaseDate($Release_date)
+    public function setRealeaseDate($RealeaseDate)
     {
-        $this->Release_date = $Release_date;
+        $this->RealeaseDate = $RealeaseDate;
     }
 
     /**

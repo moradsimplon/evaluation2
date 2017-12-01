@@ -8,6 +8,7 @@
 
 
 require("UsersManager.php");
+require("BookManager.php");
 
 
 

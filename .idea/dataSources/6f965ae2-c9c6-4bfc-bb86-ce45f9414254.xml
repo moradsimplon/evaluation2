@@ -40,12 +40,12 @@
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="18" name="Realease_date">
+    <column id="23" parent="18" name="RealeaseDate">
       <Position>4</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="24" parent="18" name="Abstract">
+    <column id="24" parent="18" name="Resume">
       <Position>5</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
@@ -55,39 +55,39 @@
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="26" parent="18" name="PRIMARY">
+    <column id="26" parent="18" name="borrowed_book">
+      <Position>7</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="27" parent="18" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="27" parent="19" name="id">
+    <column id="28" parent="19" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="28" parent="19" name="code_user">
+    <column id="29" parent="19" name="codeUser">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="29" parent="19" name="name">
+    <column id="30" parent="19" name="name">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="30" parent="19" name="firstname">
+    <column id="31" parent="19" name="firstname">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="19" name="adress">
+    <column id="32" parent="19" name="adress">
       <Position>5</Position>
-      <DataType>text|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="32" parent="19" name="borrowed_books">
-      <Position>6</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>

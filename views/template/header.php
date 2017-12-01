@@ -23,9 +23,10 @@
 <header>
 
     <nav class="navbar navbar-light bg-faded">
-        <a class="navbar-brand" href="index.php">ADMINISTRATION BIBLIOTHEQUE</a>
-    </nav>
+        <a class="navbar-brand" href="">ADMINISTRATION BIBLIOTHEQUE</a>
 
+    </nav>
+    <a href="../index.php" class=" btn btn-primary m-2">Home</a>
 </header>
 <!-- header of page -->
 

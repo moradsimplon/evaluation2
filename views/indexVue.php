@@ -9,7 +9,7 @@
     <div class="card-block">
         <h4 class="card-title">Catalogue livre</h4>
         <p class="card-text">Ajouter , editer , visualiser les stock livres disponibles .</p>
-        <a href="#" class="btn btn-success">Catalogue livres</a>
+        <a href="controllers/Books.php" class="btn btn-success">Catalogue livres</a>
     </div>
     <div class="card-footer text-muted">
         listing books

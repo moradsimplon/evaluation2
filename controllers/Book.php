@@ -1,4 +1,5 @@
 <?php
+
 // Afficher les erreurs à l'écran
 ini_set('display_errors', 1);
 // Enregistrer les erreurs dans un fichier de log
@@ -9,15 +10,17 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 ?>
 <?php
 require '../model/Autoloader.php';
-$manager= New UsersManager();
-$users = $manager->getUsers();
+$manager= New BookManager();
 
-if (isset($_POST['delete'])) {
-    $userSupp = $manager->getUser($_POST['delete']);
-    $userSupp = new ListUsers ($userSupp);
-    $manager->deleteUsers($userSupp);
 
+//show account
+if(isset($_POST['show'])){
+    $oneBook= $manager->getBook($_POST['show']);
+    $onceBook = new ListBook($oneBook);
+}
+if (empty($_POST['show'])) {
+
+    echo 'veuillez selectionner un compte';
 }
 
-
-include('../views/UsersView.php');
+include('../views/BookView.php');
