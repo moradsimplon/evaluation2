@@ -17,6 +17,7 @@ class UsersManager
 
         return $users;
     }
+
     function deleteUsers($users)
     {
         $db = $this->getDb()->prepare("DELETE FROM users WHERE id = ?");

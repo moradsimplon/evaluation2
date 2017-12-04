@@ -38,6 +38,21 @@ class BookManager
 
         return $books;
     }
+
+    function selectBook($value)
+    {
+        $res = $this->getDb()->prepare('SELECT * FROM books WHERE Category = ?');
+        $res->execute([$value]);
+        $bookCat = $res->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($bookCat as $key => $value) {
+
+            $bookCat[$key] = new ListBook($value);
+
+
+        }
+        return $bookCat;
+    }
     function deleteBook($book)
     {
         $db = $this->getDb()->prepare("DELETE FROM books WHERE id = ?");

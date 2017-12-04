@@ -11,8 +11,13 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 <?php
 require '../model/Autoloader.php';
 $manager= New BookManager();
-$books = $manager->getBooks();
+$Books = $manager->getBooks();
 
+if (isset($_POST['sort'])){
+
+$Books = $manager->selectBook($_POST['category']);
+
+}
 
 if (isset($_POST['delete'])) {
 

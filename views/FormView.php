@@ -22,7 +22,16 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
             <input name="Author" type="text" value="" placeholder="Author book's" class="form-control" /> <br/>
             <input name="RealeaseDate" type="date" value="" placeholder="Realease Date" class="form-control" /> <br/>
             <input name="Resume" type="text" value="" placeholder="Resume Book" class="form-control" /> <br/>
-            <input name="Category" type="text" value="" placeholder="Category" class="form-control" /> <br/>
+            <div  class="form-group">
+                <label for="exampleSelect1">Category</label>
+                <select name="Category" class="form-control" >
+                    <option>Thriller</option>
+                    <option>Roman</option>
+                    <option>History</option>
+                    <option>literary</option>
+
+                </select>
+            </div> <br/>
             <input type="submit" name="SubmitAdd" value="Create" class="btn btn-primary" >
     </form>
 </div>

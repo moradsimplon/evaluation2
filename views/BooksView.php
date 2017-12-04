@@ -1,6 +1,6 @@
 <?php
 include("template/header.php");
-$Books= $manager->getBooks();
+
 
 ?>
 <?php
@@ -13,10 +13,27 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
 ?>
 <!--main page -->
+<a href="Books.php" class="btn btn-danger m-2">RETURN</a>
 <section class="container">
 
     <!-- ***********account selected*********************  -->
+    <form action="Books.php" method="post">
 
+
+
+        <select name="category" id="">
+            <?php
+            foreach (ListBook::category as $value){
+
+            ?>
+            <option value="<?php echo $value ?>"><?php echo $value ?></option>
+                <?php
+            }
+            ?>
+        </select>
+        <input type="submit" name="sort" value="Sort">
+
+    </form>
     <table class="table">
         <thead>
         <tr>

@@ -13,6 +13,7 @@ ini_set('log_errors', 1);
 ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
 ?>
+<a href="Books.php" class="btn btn-danger m-2">RETURN</a>
 <!--main page -->
 <section class="container">
 
@@ -27,6 +28,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
             <th>Realease date</th>
             <th>Abstract</th>
             <th>Category</th>
+            <th>Borrowed Book</th>
         </tr>
         </thead>
 
@@ -51,6 +53,9 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
                 </td>
                 <td>
                     <a href="Book.php?id=<?= $onceBook->getId();?>" class="" title=""><?= $onceBook->getCategory(); ?></a>
+                </td>
+                <td>
+                    <a href="Book.php?id=<?= $onceBook->getId();?>" class="" title=""><?= $onceBook->getborrowedBook(); ?></a>
                 </td>
                 <td>
                     <form action="Books.php" method="post" class="" style="">

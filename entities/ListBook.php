@@ -30,6 +30,11 @@ class ListBook {
      */
     private $Category ;
 
+    protected $borrowedBook ;
+
+
+    const category= ['Roman', 'Thriller','History','Literary'];
+
 
     public function __construct($donnees)
     {
@@ -145,7 +150,25 @@ class ListBook {
      */
     public function setCategory($Category)
     {
-        $this->Category = $Category;
+        if(in_array($Category, static::category)) {
+            $this->Category = $Category;
+        }
     }
+    /**
+     * @return mixed
+     */
+    public function getBorrowedBook()
+    {
+        return $this->borrowedBook;
+    }
+
+    /**
+     * @param mixed $borrowedBook
+     */
+    public function setBorrowedBook($borrowedBook)
+    {
+        $this->borrowedBook = $borrowedBook;
+    }
+
 
 }
