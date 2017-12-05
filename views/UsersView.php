@@ -17,7 +17,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
     <!-- ***********account selected*********************  -->
 
-    <table class="table">
+    <table class="table  table-responsive">
         <thead>
         <tr>
             <th>id</th>

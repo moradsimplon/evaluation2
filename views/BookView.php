@@ -21,7 +21,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
     <!-- ***********account selected*********************  -->
 
-    <table class="table">
+    <table class="table  table-responsive">
         <thead>
         <tr>
             <th>id</th>
@@ -73,7 +73,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
     ?>
 
     <form action="Book.php" method="post">
-        <select name="BorrowerUse" >
+        <select name="BorrowerUse" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
             <?php
             foreach ($users as $key => $user)
             {
@@ -85,7 +85,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
             ?>
         </select>
         <input type="hidden" name="show" value="<?=  $onceBook->getId()?>">
-        <input type="Submit" name="Borrowed" value="Borrow" >
+        <input type="Submit" class="btn btn-secondary" name="Borrowed" value="Borrow" >
     </form>
 <?php } else { ?>
     <form action="Book.php" method="post">

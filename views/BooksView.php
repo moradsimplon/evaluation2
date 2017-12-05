@@ -14,14 +14,14 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 ?>
 <!--main page -->
 <a href="Books.php" class="btn btn-danger m-2">RETURN</a>
-<section class="container">
+<section class="container ">
 
     <!-- ***********account selected*********************  -->
     <form action="Books.php" method="post">
 
 
 
-        <select name="category" id="">
+        <select name="category" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"id="">
             <?php
             foreach (ListBook::category as $value){
 
@@ -31,10 +31,10 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
             }
             ?>
         </select>
-        <input type="submit" name="sort" value="Sort">
+        <input type="submit" class="btn btn-secondary" name="sort" value="Sort">
 
     </form>
-    <table class="table">
+    <table class="table  table-responsive">
         <thead>
         <tr>
             <th>id</th>

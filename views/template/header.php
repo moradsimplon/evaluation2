@@ -22,8 +22,8 @@
 <!-- header of page -->
 <header>
 
-    <nav class="navbar navbar-light bg-faded">
-        <a class="navbar-brand" href="">ADMINISTRATION BIBLIOTHEQUE</a>
+    <nav class="navbar navbar-light bg-faded col-auto">
+        <a class="navbar-brand" id="TitleNavbar" href="index.php">ADMINISTRATION BIBLIOTHEQUE</a>
 
     </nav>
     <a href="../index.php" class=" btn btn-primary m-2">Home</a>
