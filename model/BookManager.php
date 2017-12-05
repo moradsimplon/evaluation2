@@ -23,6 +23,19 @@ class BookManager
 
         return "book Added";
     }
+
+    function addBorrowUse($BorrowerUse){
+
+        $db = $this->getDb();
+        $q = $db->prepare("INSERT INTO books SET  borrowedBook=?");
+        $q->execute([
+            $BorrowerUse->getBorrowedBook(),
+
+        ]);
+
+        return "borrower Added";
+    }
+
     function getBooks()
     {
         $res = $this->getDb()->query('SELECT * FROM books');

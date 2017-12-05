@@ -18,6 +18,7 @@ if (isset($_POST['Title']) && isset($_POST['Author']) && isset($_POST['RealeaseD
         header('Location: Books.php');
 
     }
+
 }
 
 include('../views/FormView.php');

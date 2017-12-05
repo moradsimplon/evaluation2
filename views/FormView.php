@@ -10,6 +10,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
 ?>
 
+<a href="Books.php" class="btn btn-danger m-2">RETURN</a>
 
 
 <div class="card col-md-3">

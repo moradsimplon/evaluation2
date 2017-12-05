@@ -11,6 +11,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 <?php
 require '../model/Autoloader.php';
 $manager= New BookManager();
+$managerUser = new UsersManager();
 
 
 //show account
@@ -21,6 +22,26 @@ if(isset($_POST['show'])){
 if (empty($_POST['show'])) {
 
     echo 'veuillez selectionner un compte';
+}
+
+
+if (isset($_POST['BorrowerUse']) ) {
+    if (isset($_POST['Borrowed'])) {
+
+       $borrowUse = $managerUser->getUser($_POST['BorrowerUse']);
+        $User = new ListUsers($borrowUse);
+$onceBook->setBorrowedBook($User->getCodeUser());
+
+        $manager->addBorrowUse($onceBook);
+
+    }
+}
+
+
+if (isset($_POST['ReturnBook'])){
+    $onceBook->setBorrowedBook(NULL);
+
+    $manager->addBorrowUse($onceBook);
 }
 
 

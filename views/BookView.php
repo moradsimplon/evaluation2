@@ -1,6 +1,8 @@
 <?php
 include("template/header.php");
 
+$managerUse=new UsersManager();
+$users= $managerUse->getUsers();
 
 
 ?>
@@ -67,5 +69,29 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
         </tbody>
     </table>
+    <?php if($onceBook->getBorrowedBook()==NULL){
+    ?>
 
-</section>
+    <form action="Book.php" method="post">
+        <select name="BorrowerUse" >
+            <?php
+            foreach ($users as $key => $user)
+            {
+            ?>
+            <option value="<?=$user->getId()?>"><?= $user->getCodeUser(); ?></option>
+
+                <?php
+            }
+            ?>
+        </select>
+        <input type="hidden" name="show" value="<?=  $onceBook->getId()?>">
+        <input type="Submit" name="Borrowed" value="Borrow" >
+    </form>
+<?php } else { ?>
+    <form action="Book.php" method="post">
+
+        <input type="hidden" name="show" value="<?=  $onceBook->getId()?>">
+        <input type="Submit" name="ReturnBook" value="Return Book" >
+    </form>
+    <?php } ?>
+    </section>
