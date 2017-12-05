@@ -15,12 +15,13 @@ ini_set('log_errors', 1);
 ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
 ?>
+<!--button for return last page -->
 <a href="Books.php" class="btn btn-danger m-2">RETURN</a>
 <!--main page -->
 <section class="container">
 
-    <!-- ***********account selected*********************  -->
-
+    <!-- *******************************  -->
+    <!--table with show one book-->
     <table class="table  table-responsive">
         <thead>
         <tr>
@@ -69,6 +70,8 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
         </tbody>
     </table>
+
+    <!--condition for see one button in function the situation (if boorrower is null or no we watch this button )-->
     <?php if($onceBook->getBorrowedBook()==NULL){
     ?>
 
@@ -84,6 +87,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
             }
             ?>
         </select>
+
         <input type="hidden" name="show" value="<?=  $onceBook->getId()?>">
         <input type="Submit" class="btn btn-secondary" name="Borrowed" value="Borrow" >
     </form>
@@ -91,7 +95,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
     <form action="Book.php" method="post">
 
         <input type="hidden" name="show" value="<?=  $onceBook->getId()?>">
-        <input type="Submit" name="ReturnBook" value="Return Book" >
+        <input type="Submit" class="btn btn-secondary" name="ReturnBook" value="Return Book" >
     </form>
     <?php } ?>
     </section>

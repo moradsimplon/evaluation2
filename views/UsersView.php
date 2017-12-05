@@ -15,8 +15,8 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 <!--main page -->
 <section class="container">
 
-    <!-- ***********account selected*********************  -->
-
+    <!-- ********************************  -->
+    <!--table with show all users-->
     <table class="table  table-responsive">
         <thead>
         <tr>

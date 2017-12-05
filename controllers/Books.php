@@ -9,16 +9,20 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
 ?>
 <?php
+//Autoloader
 require '../model/Autoloader.php';
+// call PDO and create new class manager for book
 $manager= New BookManager();
+// call all books
 $Books = $manager->getBooks();
 
+// function for sort book
 if (isset($_POST['sort'])){
 
 $Books = $manager->selectBook($_POST['category']);
 
 }
-
+// function for delete book
 if (isset($_POST['delete'])) {
 
     $Supp = $manager->getBook($_POST['delete']);
@@ -27,4 +31,5 @@ if (isset($_POST['delete'])) {
 
 }
 
+//view all books
 include('../views/BooksView.php');

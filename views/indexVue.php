@@ -6,6 +6,7 @@
     <div class="card-header">
         Gerer
     </div>
+    <!--button for edit part book-->
     <div class="card-block">
         <h4 class="card-title">Catalogue livre</h4>
         <p class="card-text">Ajouter , editer , visualiser les stock livres disponibles .</p>
@@ -19,6 +20,7 @@
     <div class="card-header">
         Gerer
     </div>
+    <!--button for edit user-->
     <div class="card-block">
         <h4 class="card-title">Comptes clients</h4>
         <p class="card-text">Visualiser comptes clients et les livres emprunter .</p>

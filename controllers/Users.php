@@ -8,10 +8,14 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
 ?>
 <?php
+// Autoloader file php
 require '../model/Autoloader.php';
+// call PDO for Users
 $manager= New UsersManager();
+// call for all users
 $users = $manager->getUsers();
 
+//function for delete
 if (isset($_POST['delete'])) {
     $userSupp = $manager->getUser($_POST['delete']);
     $userSupp = new ListUsers ($userSupp);
@@ -19,5 +23,5 @@ if (isset($_POST['delete'])) {
 
 }
 
-
+// views users pages
 include('../views/UsersView.php');

@@ -9,13 +9,13 @@ ini_set('log_errors', 1);
 ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
 ?>
-
+<!--button return last page-->
 <a href="Books.php" class="btn btn-danger m-2">RETURN</a>
 
 
 <div class="card col-md-3">
 
-
+    <!--Form for add book-->
     <label for="">Add Book</label>
     <form action="Form.php" method="post" id="formAddBook" class="form-group" style="display:hidden" >
         <div class="card-block">

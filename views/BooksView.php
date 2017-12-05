@@ -13,14 +13,15 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
 ?>
 <!--main page -->
+<!--button return last page -->
 <a href="Books.php" class="btn btn-danger m-2">RETURN</a>
 <section class="container ">
 
-    <!-- ***********account selected*********************  -->
+    <!-- ********************************  -->
     <form action="Books.php" method="post">
 
 
-
+        <!--dropdown for select category -->
         <select name="category" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"id="">
             <?php
             foreach (ListBook::category as $value){
@@ -34,6 +35,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
         <input type="submit" class="btn btn-secondary" name="sort" value="Sort">
 
     </form>
+    <!--table for see all books -->
     <table class="table  table-responsive">
         <thead>
         <tr>
@@ -78,6 +80,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
                     </form>
                 </td>
                 <td>
+                    <!--button delete -->
                     <form action="Books.php" method="post" class="" style="">
                         <input name="delete" type="hidden" value="<?= $Book->getId();?>"/>
                         <input class="btn btn-danger" id="" type="Submit" name="" value="Supprimer"/>
@@ -90,6 +93,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
         ?>
         </tbody>
     </table>
+    <!--button for redirect on form for add book -->
     <a href="Form.php" class="btn btn-success">Add Book</a>
 
 </section>

@@ -9,6 +9,7 @@
 class BookManager
 {
 
+    // function for add book in db
     function addBooks($book)
     {
         $db = $this->getDb();
@@ -24,6 +25,7 @@ class BookManager
         return "book Added";
     }
 
+    // function for add user in boorewedBook in db
     function addBorrowUse($BorrowerUse){
 
         $db = $this->getDb();
@@ -36,6 +38,7 @@ class BookManager
         return "borrower Added";
     }
 
+    // function for get all books in db
     function getBooks()
     {
         $res = $this->getDb()->query('SELECT * FROM books');
@@ -52,6 +55,7 @@ class BookManager
         return $books;
     }
 
+    // function for select category book in db
     function selectBook($value)
     {
         $res = $this->getDb()->prepare('SELECT * FROM books WHERE Category = ?');
@@ -66,6 +70,8 @@ class BookManager
         }
         return $bookCat;
     }
+
+    // function for delete book in db
     function deleteBook($book)
     {
         $db = $this->getDb()->prepare("DELETE FROM books WHERE id = ?");
@@ -75,6 +81,7 @@ class BookManager
 
     }
 
+    // function for get one book in db
     function getBook($id)
     {
 

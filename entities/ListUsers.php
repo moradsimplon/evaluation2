@@ -3,24 +3,41 @@
 
 class ListUsers
 {
-protected $id ;
-protected $codeUser;
-protected $name ;
-protected $firstName;
-protected $adress;
+    /**
+     * @var
+     */
+    protected $id ;
+    /**
+     * @var
+     */
+    protected $codeUser;
+    /**
+     * @var
+     */
+    protected $name ;
+    /**
+     * @var
+     */
+    protected $firstName;
+    /**
+     * @var
+     */
+    protected $adress;
 
 
-
-
-
-
-
+    /**
+     * ListUsers constructor.
+     * @param $donnees
+     */
     public function __construct($donnees)
     {
         $this->hydrate($donnees);
     }
 
 
+    /**
+     * @param array $donnees
+     */
     public function hydrate(array $donnees)
     {
         foreach ($donnees as $key => $value)

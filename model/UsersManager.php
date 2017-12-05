@@ -2,6 +2,7 @@
 
 class UsersManager
 {
+    // function for get all user in db
     function getUsers()
     {
         $res = $this->getDb()->query('SELECT * FROM users');
@@ -17,13 +18,14 @@ class UsersManager
 
         return $users;
     }
-
+//function for delete user in db
     function deleteUsers($users)
     {
         $db = $this->getDb()->prepare("DELETE FROM users WHERE id = ?");
         $db->execute([$users->getId()]);
 
     }
+    // function for get on user in db
     function getUser($id)
     {
 

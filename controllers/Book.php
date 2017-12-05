@@ -9,8 +9,12 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
 
 ?>
 <?php
+//Autoloader file
 require '../model/Autoloader.php';
+
+// call PDO and create new class manager for book
 $manager= New BookManager();
+// call PDO and create new class manager for User
 $managerUser = new UsersManager();
 
 
@@ -24,7 +28,7 @@ if (empty($_POST['show'])) {
     echo 'veuillez selectionner un compte';
 }
 
-
+// add codeUser in BorrewedBook
 if (isset($_POST['BorrowerUse']) ) {
     if (isset($_POST['Borrowed'])) {
 
@@ -37,12 +41,12 @@ $onceBook->setBorrowedBook($User->getCodeUser());
     }
 }
 
-
+// clean BorrowedBook if the book return
 if (isset($_POST['ReturnBook'])){
     $onceBook->setBorrowedBook(NULL);
 
     $manager->addBorrowUse($onceBook);
 }
 
-
+// view one book
 include('../views/BookView.php');

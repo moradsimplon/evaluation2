@@ -6,8 +6,9 @@
  * Time: 11:52
  */
 
-
+// include manager for user
 require("UsersManager.php");
+// include manager for book
 require("BookManager.php");
 
 
