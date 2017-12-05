@@ -1,5 +1,5 @@
+
 <?php
-
-
-include "../views/indexVue.php";
+// views home page
+include"views/indexVue.php";
  ?>

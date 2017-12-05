@@ -1,5 +1,12 @@
 <?php
 
-//this can be something close to a routing system
+include("controllers/index.php");
 
- ?>
+?>
+
+
+
+
+
+
+
